@@ -30,21 +30,3 @@ def getGuessedWord(secretWord, letterGuessed):
             value='_'
         char=char+value
         return char
-def getAvailableWord(secretWord, letterGuessed):
-    '''
-    return the available letter which are not guessed by the user
-    '''
-    lowerstr=string.ascii_lowercase
-    value = ''
-    total=''
-    for x in lowerstr:
-        if lowerstr not in letterGuessed:
-            value = 'x'
-        else:
-            value=''
-        total=total +value
-    return total
-'''
-
-currently working on it
-'''
