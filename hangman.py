@@ -1,6 +1,6 @@
 import random
 import string
-word= 'blue green yellow black red'.split()
+word= 'blue green yellow black brown red'.split()
 def chooseWord(word):
     return random.choice(word)
 def isWordGuessed(secretWord, letterGuessed):
@@ -44,8 +44,3 @@ def getAvailableWord(secretWord, letterGuessed):
             value=''
         total=total +value
     return total
-<<<<<<< HEAD
-=======
-
-
->>>>>>> change
