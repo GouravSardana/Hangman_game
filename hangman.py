@@ -44,3 +44,6 @@ def getAvailableWord(secretWord, letterGuessed):
             value=''
         total=total +value
     return total
+'''
+currently working
+'''
