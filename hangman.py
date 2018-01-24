@@ -9,13 +9,14 @@ def isWordGuessed(secretWord, letterGuessed):
        if all the letter which we are guessing is in secretWord
        then our function  return True otherwise False   
     """
+    counter=0
     for x in range(len(secretWord)):
-        counter=0
+        
         if secretWord[x] in letterGuessed:
             counter+=1
-        if counter == len(secretWord):
+    if counter == len(secretWord):
             return True
-        else:
+    else:
             return False
 def getGuessedWord(secretWord, lettersGuessed):
     '''
@@ -57,14 +58,14 @@ def hangman(secretWord):
     while guessLeft>0 and not isWordGuessed(secretWord,letterGuessed):
         print('number of guesses left', str(guessLeft))
         print('Available letter are :', getAvailableWord(letterGuessed))
-        guess=input('Please guess the letter:  ')
+        guess=str(input('Please guess the lettter:  '))
         guess=guess.lower()
-        while guess!=1 and guess not in string.ascii_lowercase:
-            print('Enter a valid letter')
+        while len(guess)!=1 and guess not in string.ascii_lowercase:
+            guess=str(input('Please guess the letter:  '))
         if guess not in letterGuessed:
             letterGuessed.append(guess)
             if guess in secretWord:
-                print('Good choice')
+                print('Good choice', end=' ')
                 
             else:
                 guessLeft-=1
